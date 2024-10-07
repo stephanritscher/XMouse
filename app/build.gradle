@@ -7,14 +7,15 @@ android {
         }
     }
 
-    compileSdkVersion 31
-
     defaultConfig {
         applicationId "com.stripe1.xmouse"
+        namespace "com.stripe1.xmouse"
         minSdkVersion 14
-        targetSdkVersion 31
+        compileSdk 34
+        targetSdkVersion 34
         versionCode 25
         versionName "2.0.27"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -28,6 +29,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     testImplementation 'org.mockito:mockito-core:4.6.1'
     testImplementation 'org.mockito:mockito-inline:4.6.1'
+    testImplementation 'net.bytebuddy:byte-buddy:1.15.3'
     testImplementation 'com.tngtech.java:junit-dataprovider:1.13.1'
     implementation 'com.jcraft:jsch:0.1.55'
     implementation 'com.madgag.spongycastle:core:1.58.0.0'
@@ -37,4 +39,5 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.drawerlayout:drawerlayout:1.1.1'
     implementation 'com.google.android.material:material:1.6.1'
+    implementation "androidx.multidex:multidex:2.0.1"
 }
